@@ -1,17 +1,14 @@
-
-function getStudent(name: string): string {
-    return "Student Name: " + name;
+function getProduct(name: string): string {
+    return "Product Name: " + name;
 }
-const getMarks = (marks: number): string => {
-    return "Marks: " + marks;
+const getPrice = (price: number): string => {
+    return "Price: " + price;
 };
-
-const displayStudent = (name: string, marks: number): void => {
-    console.log(getStudent(name));
-    console.log(getMarks(marks));
+const displayProduct = (name: string, price: number): void => {
+    console.log(getProduct(name));
+    console.log(getPrice(price));
 };
-console.log(getStudent("Ravi"));
-console.log(getMarks(85));
-
-displayStudent("Anu", 92);
-displayStudent("Kiran", 78);
+console.log(getProduct("Laptop"));
+console.log(getPrice(55000));
+displayProduct("Mobile Phone", 25000);
+displayProduct("Headphones", 3000);
