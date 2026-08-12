@@ -1,30 +1,28 @@
-class Employee {
-    public name: string;
-    private salary: number;
-    protected company: string;
+class BankAccount {
+    public accountHolder: string;
+    private balance: number;
+    protected bankName: string;
 
-    constructor(name: string, salary: number) {
-        this.name = name;
-        this.salary = salary;
-        this.company = "ABC Company";
+    constructor(accountHolder: string, balance: number) {
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+        this.bankName = "State Bank";
     }
 
     public showDetails(): void {
-        console.log("Employee Name: " + this.name);
-        console.log("Salary: " + this.salary);
+        console.log("Account Holder: " + this.accountHolder);
+        console.log("Balance: " + this.balance);
     }
 }
 
-class Manager extends Employee {
-    public showCompany(): void {
-        console.log("Company: " + this.company);
+class SavingsAccount extends BankAccount {
+    public showBank(): void {
+        console.log("Bank Name: " + this.bankName);
     }
 }
+const account1 = new BankAccount("Rahul", 25000);
+account1.showDetails();
 
-// Creating Objects
-const emp1 = new Employee("Rahul", 30000);
-emp1.showDetails();
-
-const emp2 = new Manager("Anita", 50000);
-emp2.showDetails();
-emp2.showCompany();
+const account2 = new SavingsAccount("Anita", 50000);
+account2.showDetails();
+account2.showBank();
