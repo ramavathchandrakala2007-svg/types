@@ -1,15 +1,15 @@
-let employeeData: any = 101;
-employeeData = "Rahul";
-employeeData = true;
+let productData: any = 501;
+productData = "Laptop";
+productData = true;
 
-let userInput: unknown = "Software Developer";
+let productInput: unknown = "Gaming Laptop";
 
-if (typeof userInput === "string") {
-    console.log("Role Length:", userInput.length);
+if (typeof productInput === "string") {
+    console.log("Product Name Length:", productInput.length);
 }
 
-function displayStatus(status: string): void {
+function displayProductStatus(status: string): void {
     console.log("STATUS:", status);
 }
 
-displayStatus("Employee details loaded successfully!");
+displayProductStatus("Product details loaded successfully!");
