@@ -1,20 +1,20 @@
-let libraryName: string = "Central Library";
-let totalBooks: number = 5000;
-let isOpen: boolean = true;
+let hospitalName: string = "City Care Hospital";
+let totalDoctors: number = 50;
+let isAvailable: boolean = true;
 
-function getLibraryInfo(name: string, books: number): string {
-    return `${name} contains ${books} books.`;
+function getHospitalInfo(name: string, doctors: number): string {
+    return `${name} has ${doctors} doctors.`;
 }
 
-let categories: string[] = [
-    "Science",
-    "Technology",
-    "History",
-    "Literature"
+let departments: string[] = [
+    "Cardiology",
+    "Neurology",
+    "Pediatrics",
+    "Orthopedics"
 ];
 
-const summary: string = getLibraryInfo(libraryName, totalBooks);
+const summary: string = getHospitalInfo(hospitalName, totalDoctors);
 
 console.log(summary);
-console.log(`Book Categories: ${categories.join(", ")}`);
-console.log(`Library Open: ${isOpen ? "Yes" : "No"}`);
+console.log(`Departments: ${departments.join(", ")}`);
+console.log(`Hospital Available: ${isAvailable ? "Yes" : "No"}`);
