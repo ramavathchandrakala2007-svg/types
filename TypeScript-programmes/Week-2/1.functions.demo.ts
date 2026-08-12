@@ -1,25 +1,22 @@
-
-function displayEmployee(name: string, salary: number): void {
-    console.log("Employee Name: " + name);
-    console.log("Salary: " + salary);
+function displayStudent(name: string, marks: number): void {
+    console.log("Student Name: " + name);
+    console.log("Marks: " + marks);
 }
-function yearlySalary(monthlySalary: number): number {
-    return monthlySalary * 12;
-function isEligible(salary: number): boolean {
-    if (salary >= 30000) {
+function totalMarks(subjectMarks: number): number {
+    return subjectMarks * 5;
+}
+function isPassed(marks: number): boolean {
+    if (marks >= 40) {
         return true;
     } else {
         return false;
     }
 }
-displayEmployee("Rahul", 35000);
-
-let annual = yearlySalary(35000);
-console.log("Yearly Salary: " + annual);
-
-if (isEligible(35000)) {
-    console.log("Employee is eligible for bonus.");
+displayStudent("Chandrakala", 75);
+let total = totalMarks(75);
+console.log("Total Marks: " + total);
+if (isPassed(75)) {
+    console.log("Student has passed the exam.");
 } else {
-    console.log("Employee is not eligible for bonus.");
-}
+    console.log("Student has failed the exam.");
 }
