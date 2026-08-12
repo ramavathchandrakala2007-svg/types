@@ -1,32 +1,36 @@
-class Student {
+class Employee {
     name: string;
-    marks: number;
+    salary: number;
 
-    constructor(name: string, marks: number) {
+    constructor(name: string, salary: number) {
         this.name = name;
-        this.marks = marks;
+        this.salary = salary;
     }
 
-    checkResult(): string {
-        if (this.marks >= 35) {
-            return "Pass";
+    checkBonus(): string {
+        if (this.salary >= 30000) {
+            return "Eligible";
         } else {
-            return "Fail";
+            return "Not Eligible";
         }
     }
 
     displayDetails(): void {
-        console.log(" Student Details ");
+        console.log("Employee Details");
         console.log("Name: " + this.name);
-        console.log("Marks: " + this.marks);
-        console.log("Result: " + this.checkResult());
-        console.log("   ");
+        console.log("Salary: " + this.salary);
+        console.log("Bonus: " + this.checkBonus());
+        console.log("----------------");
     }
 }
-const student1 = new Student("Rahul", 80);
-const student2 = new Student("Anita", 25);
-student1.displayDetails();
-student2.displayDetails();
-student2.marks = 60;
-console.log("\nAfter Updating Marks:");
-student2.displayDetails();
+
+const employee1 = new Employee("Rahul", 45000);
+const employee2 = new Employee("Anita", 25000);
+
+employee1.displayDetails();
+employee2.displayDetails();
+
+employee2.salary = 35000;
+
+console.log("\nAfter Updating Salary:");
+employee2.displayDetails();
