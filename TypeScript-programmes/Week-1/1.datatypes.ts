@@ -1,4 +1,4 @@
-let employeeName: string = "Rahul";
+let employeeName: string = "Chandrakala";
 let employeeAge: number = 25;
 let isWorking: boolean = true;
 console.log("Data Type of Employee Name is -->", typeof employeeName);
